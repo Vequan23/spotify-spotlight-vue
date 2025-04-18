@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import styles from './NewRelease.module.css'
-import { SpotifyAlbum } from '../../types/NewReleases.types.ts'
+import type { SpotifyAlbum } from '../../types/NewReleases.types.ts'
 import BaseLink from '@/components/common/BaseLink.vue'
 
 const props = defineProps<{

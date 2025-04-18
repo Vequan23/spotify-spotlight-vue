@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import styles from './ArtistsDetails.module.css'
-import SpotifyArtistDetails from '../../types/NewReleases.types.ts'
+import type { SpotifyArtistDetails } from '../../types/NewReleases.types.ts'
 
 const props = defineProps<{
   artist: SpotifyArtistDetails

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import styles from './NewReleaseList.module.css'
 import NewRelease from '../NewRelease/NewRelease.vue'
-import { SpotifyAlbum } from '../../types/NewReleases.types.ts'
+import type { SpotifyAlbum } from '../../types/NewReleases.types.ts'
 
 defineProps<{
   newReleases: SpotifyAlbum[]

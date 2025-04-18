@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import SpotifyArtist from '../../types/NewReleases.types.ts'
+import type { SpotifyArtist } from '../../types/NewReleases.types.ts'
 import { ALL_ARTISTS_ID } from '../../constants/constants'
 
 defineProps<{
