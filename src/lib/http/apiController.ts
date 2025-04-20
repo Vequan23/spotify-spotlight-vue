@@ -18,12 +18,11 @@ apiController.interceptors.request.use(async (config) => {
 
   if (!accessToken || now >= tokenExpiry) {
     try {
-      const res = await fetch(import.meta.env.VITE_NEXT_JS_URL, {
+      const { data } = await axios.get(import.meta.env.VITE_NEXT_JS_URL, {
         headers: {
           'x-internal-api-key': import.meta.env.VITE_PUBLIC_API_KEY
         }
       });
-      const data = await res.json();
       accessToken = data.token;
 
       tokenExpiry = now + TOKEN_EXPIRY_MS;
