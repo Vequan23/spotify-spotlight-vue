@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import styles from './NewRelease.module.css'
 import type { SpotifyAlbum } from '../../types/NewReleases.types.ts'
-import BaseLink from '@/components/common/BaseLink.vue'
+import ExternalLink from '@/components/common/ExternalLink.vue'
 
 const props = defineProps<{
   release?: SpotifyAlbum
@@ -27,9 +27,9 @@ const artistLink = artists[0].external_urls.spotify
     <img alt="" :class="styles.artwork" :src="imageUrl" />
     <div :class="styles.metadataContainer">
       <p :class="styles.name">{{ name }}</p>
-      <BaseLink :href="artistLink" :class="styles.artistName">
+      <ExternalLink :href="artistLink" :class="styles.artistName">
         {{ artistName }}
-      </BaseLink>
+      </ExternalLink>
       <p :class="styles.date">{{ formattedDate }}</p>
     </div>
   </div>
